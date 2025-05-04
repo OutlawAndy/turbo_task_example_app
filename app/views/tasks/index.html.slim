@@ -1,0 +1,15 @@
+.flex.justify-between
+  .header__title
+    h1 Tasks
+  .header__actions
+    = link_to 'New Task', new_task_path, class: 'btn btn-primary'
+
+table.table
+  thead: tr
+    th
+    th Task
+    th description
+    th Actions
+  tbody
+    = render @tasks
+

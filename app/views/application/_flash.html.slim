@@ -1,0 +1,5 @@
+#flash data-turbo-temporary="true"
+  - flash.each do |type, message|
+    .alert.alert--flash class="alert--#{type}" role="alert" data-testid="flash-notification"
+      .alert__messages
+        .alert__description = message

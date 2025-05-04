@@ -1,0 +1,9 @@
+-# locals: (task:)
+
+tr data-testid=dom_id(task)
+  td = check_box_tag '', '', task.done?
+  td = task.name
+  td = task.description
+  td.flex.gap-sm
+    = link_to 'Edit', [:edit, task], class: 'btn'
+    = button_to 'Delete', task, method: :delete, class: 'btn btn-danger'
