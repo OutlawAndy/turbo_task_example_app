@@ -1,7 +1,9 @@
 -# locals: (task:)
 
 tr data-testid=dom_id(task)
-  td = check_box_tag '', '', task.done?
+  td
+    = form_for task do |f|
+      = f.check_box :done, onchange: 'this.form.requestSubmit()'
   td = task.name
   td = task.description
   td.flex.gap-sm

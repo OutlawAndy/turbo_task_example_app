@@ -8,5 +8,6 @@ class Task < ApplicationRecord
     self.done_at = ActiveRecord::Type::Boolean.new.cast(form_value) ? Time.current : nil
   end
 
-  def done? = done_at.present?
+  def done = done_at.present?
+  alias done? done
 end
