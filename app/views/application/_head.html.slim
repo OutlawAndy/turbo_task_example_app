@@ -1,0 +1,11 @@
+  = csrf_meta_tags
+  = csp_meta_tag
+  = yield :head
+
+  link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.3/dist/css/optics.min.css"
+
+  meta name="turbo-refresh-method" content="morph"
+  meta name="turbo-refresh-scroll" content="preserve"
+
+  = stylesheet_link_tag :app, 'data-turbo-track': 'reload'
+  = javascript_importmap_tags

@@ -1,6 +1,4 @@
-.flex.justify-between
-  .header__title
-    h1 Edit Task
+= content_for :modal_header do
+  h1 Edit Task
 
-.container
-  = render 'form', model: @task
+= render 'form', model: @task

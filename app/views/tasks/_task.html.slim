@@ -5,5 +5,5 @@ tr data-testid=dom_id(task)
   td = task.name
   td = task.description
   td.flex.gap-sm
-    = link_to 'Edit', [:edit, task], class: 'btn'
+    = link_to 'Edit', [:edit, task], class: 'btn', data: { turbo_frame: 'modal' }
     = button_to 'Delete', task, method: :delete, class: 'btn btn-danger'

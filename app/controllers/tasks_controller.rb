@@ -7,6 +7,11 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    render layout: 'modal'
+  end
+
+  def edit
+    render layout: 'modal'
   end
 
   def create
@@ -15,7 +20,7 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to tasks_path, notice: 'Task was successfully created.'
     else
-      render :new, status: :unprocessable_content
+      render :new, status: :unprocessable_content, layout: 'modal'
     end
   end
 
@@ -23,7 +28,7 @@ class TasksController < ApplicationController
     if @task.update(task_params)
       redirect_to tasks_path, notice: 'Task was successfully updated.'
     else
-      render :edit, status: :unprocessable_content
+      render :edit, status: :unprocessable_content, layout: 'modal'
     end
   end
 

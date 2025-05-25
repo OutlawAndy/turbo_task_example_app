@@ -1,9 +1,10 @@
 -# locals: (model:)
 
-= form_with model: do |f|
+= form_for model do |f|
   .form__group
     = f.label :name
     = f.text_field :name, class: 'form-control'
+    = tag.p(f.object.errors[:name].join(', '), class: 'form-error') if f.object.errors[:name].any?
   .form__group
     = f.label :description
     = f.text_area :description, class: 'form-control'
@@ -13,6 +14,6 @@
   .form__group
     = f.label :done_at
     = f.date_field :done_at, class: 'form-control'
-  .flex.justify-end.gap-sm
-    = link_to 'Cancel', tasks_path, class: 'btn'
-    = f.submit 'Save', class: 'btn btn-primary'
+
+  = content_for :modal_footer do
+    = f.submit 'Save', class: 'btn btn-primary', form: f.id

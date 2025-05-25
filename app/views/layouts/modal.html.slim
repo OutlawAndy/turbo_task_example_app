@@ -1,0 +1,16 @@
+doctype html
+html
+  head = render 'head'
+  body
+    = turbo_frame_tag 'modal' do
+      dialog.modal(
+        open=(response.message.start_with?('Unprocessable'))
+        data-controller="dialog"
+      )
+        .modal__header
+          = yield :modal_header
+        .modal__body data-testid="modal-content"
+          = yield
+        .modal__footer
+          = button_tag 'Close', class: 'btn', data: { action: 'dialog#close' }
+          = yield :modal_footer
