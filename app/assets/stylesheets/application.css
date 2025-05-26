@@ -9,7 +9,7 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
-#app__content[inert]::after {
+#app[inert]::after {
   content: '';
   position: absolute;
   top: 0;

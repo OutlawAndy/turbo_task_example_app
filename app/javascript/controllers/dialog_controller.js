@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     if (!this.element.open) this.open()
-    this.setInert(true)
+    this.applyBackdrop(true)
   }
 
   disconnect() {
@@ -16,10 +16,10 @@ export default class extends Controller {
 
   close() {
     this.element.close()
-    this.setInert(false)
+    this.applyBackdrop(false)
   }
 
-  setInert(value) {
-    document.getElementById('app__content').inert = value
+  applyBackdrop(value) {
+    document.getElementById('app').inert = value
   }
 }
