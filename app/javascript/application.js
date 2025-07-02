@@ -9,3 +9,12 @@ document.addEventListener('turbo:frame-missing', (event) => {
     event.detail.visit(event.detail.response.url, { action: 'replace' })
   }
 })
+
+document.addEventListener('turbo:before-morph-element', (event) => {
+  // ensure flash notification animations are always run
+  if (event.target.role === 'alert' && event.detail.newElement) {
+    const parent = event.target.parentElement
+    event.target.remove()
+    parent.appendChild(event.detail.newElement)
+  }
+})
