@@ -6,7 +6,7 @@ Read the article on Medium: [Turbo Frame Modals, The Definitive Guide](https://m
 
 ## Setup
 
-You'll need Ruby v3.4.3 installed.
+You'll need Ruby v3.4.4 installed.
 
 After cloning the repository, run `bin/setup` and then view the running app in your browser at `http://localhost:3000`
 

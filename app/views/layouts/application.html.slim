@@ -3,6 +3,7 @@ html data-theme-mode="light"
   head = render 'head'
   body
     = render 'flash'
+    = render 'confirm'
     = turbo_frame_tag 'modal'
     #app.container
       = yield
