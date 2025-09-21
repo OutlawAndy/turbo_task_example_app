@@ -26,7 +26,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to tasks_path, notice: 'Task was successfully updated.'
+      redirect_to tasks_path, notice: @task.just_completed? ? "#{@task.name} Completed!" : 'Task was successfully updated.'
     else
       render :edit, status: :unprocessable_content, layout: 'modal'
     end
