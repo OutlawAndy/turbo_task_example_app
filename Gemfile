@@ -51,14 +51,11 @@ group :development, :test do
   gem "faker"
 
   gem "rolemodel-rails"
+  gem "rubocop"
+  gem "rubocop-rails"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-end
-
-group :development, :test do
-  gem "rubocop"
-  gem "rubocop-rails"
 end
