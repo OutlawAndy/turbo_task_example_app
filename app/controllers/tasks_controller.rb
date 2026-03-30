@@ -7,34 +7,34 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
-    render layout: 'modal'
+    render layout: "modal"
   end
 
   def edit
-    render layout: 'modal'
+    render layout: "modal"
   end
 
   def create
     @task = Task.new(task_params)
 
     if @task.save
-      redirect_to tasks_path, notice: 'Task was successfully created.'
+      redirect_to tasks_path, notice: "Task was successfully created."
     else
-      render :new, status: :unprocessable_content, layout: 'modal'
+      render :new, status: :unprocessable_content, layout: "modal"
     end
   end
 
   def update
     if @task.update(task_params)
-      redirect_to tasks_path, notice: @task.just_completed? ? "#{@task.name} Completed!" : 'Task was successfully updated.'
+      redirect_to tasks_path, notice: @task.just_completed? ? "#{@task.name} Completed!" : "Task was successfully updated."
     else
-      render :edit, status: :unprocessable_content, layout: 'modal'
+      render :edit, status: :unprocessable_content, layout: "modal"
     end
   end
 
   def destroy
     @task.destroy
-    redirect_to tasks_path, notice: 'Task was successfully destroyed.'
+    redirect_to tasks_path, notice: "Task was successfully destroyed."
   end
 
   private

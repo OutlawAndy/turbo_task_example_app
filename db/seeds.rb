@@ -7,6 +7,6 @@
     name: "#{Faker::Verb.base} #{Faker::Hobby.activity}",
     description: Faker::Quote.yoda,
     due_at: Faker::Date.between(from: 1.week.ago, to: 2.weeks.from_now),
-    done: [true, false].sample,
+    done: [ true, false ].sample,
   )
 end

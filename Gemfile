@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.2"
+gem "rails", "~> 8.1.3"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use sqlite3 as the database for Active Record
@@ -49,6 +49,10 @@ group :development, :test do
 
   # Test & Seed data generation [https://github.com/faker-ruby/faker]
   gem "faker"
+
+  gem "rolemodel-rails"
+  gem "rubocop"
+  gem "rubocop-rails"
 end
 
 group :development do

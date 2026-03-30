@@ -1,12 +1,12 @@
 # README
 
-Example Rails 8 + Turbo app
+Example Rails 8.1 + Turbo app
 
 Read the article on Medium: [Turbo Frame Modals, The Definitive Guide](https://medium.com/@outlawandy/turbo-frame-modals-869801e37591).
 
 ## Setup
 
-You'll need Ruby v3.4.4 installed.
+You'll need Ruby v4.0.2 installed.
 
 After cloning the repository, run `bin/setup` and then view the running app in your browser at `http://localhost:3000`
 
